@@ -46,7 +46,7 @@ def ButtonHandeler(channel):
     Args:
         channel(int):  The RPi GPIO channel used for monitoring the button
     """
-    if GPIO.input(channel) == GPIO.HIGH:
+    if GPIO.input(channel) == GPIO.LOW:
         set("Button","Pressed")
     else:
         set("Button","Released")
